@@ -5,16 +5,19 @@
 // navigation links
 .link-area {
 	a {
-		border-bottom: 1px solid;
+		border-bottom: 2px solid;
+	}
+	.link-active {
+		border-color: green;
 	}
 }
 // button area
 .btn-area {
-	border-bottom: 2px solid #cecece;
+	border-bottom: 3px solid #cecece;
 	button {
-		margin-bottom: -2px;
+		margin-bottom: -2.5px;
 	}
 	.btn-active {
-		border-bottom: 2px solid green;
+		border-bottom: 3px solid green;
 	}
 }
