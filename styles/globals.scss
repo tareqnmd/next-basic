@@ -8,3 +8,13 @@
 		border-bottom: 1px solid;
 	}
 }
+// button area
+.btn-area {
+	border-bottom: 2px solid #cecece;
+	button {
+		margin-bottom: -2px;
+	}
+	.btn-active {
+		border-bottom: 2px solid green;
+	}
+}
