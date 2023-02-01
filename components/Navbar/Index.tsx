@@ -10,7 +10,7 @@ export default function Index() {
 		<NavStyle className="flex justify-between items-center w-100 shadow p-3 gap-4 link-area">
 			<Link href="/">Home</Link>
 			<nav>
-				<Link href="/hooks">Hooks</Link>
+				<Link href="/default-hooks">Hooks</Link>
 			</nav>
 		</NavStyle>
 	);
