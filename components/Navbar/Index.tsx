@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 const NavStyle = styled.header`
-	color: red;
+	color: #333333;
 `;
 
 export default function Index() {

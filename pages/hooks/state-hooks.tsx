@@ -1,3 +1,5 @@
+import StateHooks from '@/components/state-hooks/StateHooks';
+
 export default function Index() {
-	return <div>state-hooks</div>;
+	return <StateHooks />;
 }
