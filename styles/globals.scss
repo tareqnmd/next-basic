@@ -2,6 +2,25 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@layer components {
+	// input field
+	.input-field {
+		@apply appearance-none block w-80 bg-white text-gray-700 border border-gray-800 rounded py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500;
+	}
+	//count badge
+	.count-badge {
+		@apply bg-green-100 text-4xl text-green-800 font-medium px-4 py-4 w-80 text-center font-bold rounded dark:bg-green-900 dark:text-green-300;
+	}
+	//basic button
+	.btn-basic {
+		@apply bg-blue-500 w-40 inline-block hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+	}
+	//danger button
+	.btn-danger {
+		@apply bg-red-500 w-40 hover:bg-red-700 text-white font-bold py-2 px-4 rounded;
+	}
+}
+
 // navigation links
 .link-area {
 	a {
