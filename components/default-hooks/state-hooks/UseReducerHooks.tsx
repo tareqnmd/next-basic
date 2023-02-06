@@ -24,6 +24,7 @@ type Action = {
 export default function UseReducerHooks({}) {
 	const initialState: State = { count: 0, step: 1 };
 	const [state, dispatch] = useReducer(reducer, initialState);
+
 	function reducer(state: State = initialState, action: Action) {
 		switch (action.type) {
 			case ActionType.INCREMENT:
@@ -46,6 +47,18 @@ export default function UseReducerHooks({}) {
 		}
 	}
 
+	const increment = () => {
+		dispatch({ type: ActionType.INCREMENT });
+	};
+
+	const decrement = () => {
+		dispatch({ type: ActionType.DECREMENT });
+	};
+
+	const stepper = (value: number) => {
+		dispatch({ type: ActionType.STEP, payload: value });
+	};
+
 	return (
 		<div className="flex flex-col items-center justify-center">
 			<div className="count-badge my-4">{state.count}</div>
@@ -53,14 +66,14 @@ export default function UseReducerHooks({}) {
 				className="input-field"
 				type="number"
 				value={state.step}
-				onChange={(e) => dispatch({ type: ActionType.STEP, payload: Number(e.target.value) })}
+				onChange={(e) => stepper(Number(e.target.value))}
 				placeholder="Step Size"
 			/>
 			<div className="flex mt-4">
-				<button className="btn-basic" onClick={() => dispatch({ type: ActionType.INCREMENT })}>
+				<button className="btn-basic" onClick={increment}>
 					Increment
 				</button>
-				<button className="btn-danger" onClick={() => dispatch({ type: ActionType.DECREMENT })}>
+				<button className="btn-danger" onClick={decrement}>
 					Decrement
 				</button>
 			</div>
