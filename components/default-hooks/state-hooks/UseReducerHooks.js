@@ -1,14 +1,11 @@
 import { useReducer } from 'react';
+
 const actionType = { INCREMENT: 'increment', DECREMENT: 'decrement', STEP: 'decrement' };
-type State = {
-	count: number;
-	step: number;
-};
 
 export default function UseReducerHooks({}) {
-	const initialState: State = { count: 0, step: 1 };
+	const initialState = { count: 0, step: 1 };
 	const [state, dispatch] = useReducer(reducer, initialState);
-	function reducer(state = initialState, action: { type: string; payload: Number }) {
+	function reducer(state = initialState, actionType) {
 		switch (action.type) {
 			case actionType.INCREMENT:
 				return {
