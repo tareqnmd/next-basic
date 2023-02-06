@@ -12,7 +12,7 @@ type Action = {
 export default function UseReducerHooks({}) {
 	const initialState: State = { count: 0, step: 1 };
 	const [state, dispatch] = useReducer(reducer, initialState);
-	function reducer(state = initialState, action: Action) {
+	function reducer(state: State = initialState, action: Action) {
 		switch (action.type) {
 			case actionType.INCREMENT:
 				return {
