@@ -1,9 +1,9 @@
 import { useReducer } from 'react';
-// const actionType = { INCREMENT: 'increment', DECREMENT: 'decrement', STEP: 'decrement' };
+// const actionType = { INCREMENT: 'increment', DECREMENT: 'decrement', STEP: 'step' };
 enum ActionType {
 	INCREMENT = 'increment',
 	DECREMENT = 'decrement',
-	STEP = 'decrement',
+	STEP = 'step',
 }
 
 type State = {
