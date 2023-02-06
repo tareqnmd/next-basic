@@ -1,11 +1,23 @@
 import { useReducer } from 'react';
-const actionType = { INCREMENT: 'increment', DECREMENT: 'decrement', STEP: 'decrement' };
+// const actionType = { INCREMENT: 'increment', DECREMENT: 'decrement', STEP: 'decrement' };
+enum ActionType {
+	INCREMENT = 'increment',
+	DECREMENT = 'decrement',
+	STEP = 'decrement',
+}
+
 type State = {
 	count: number;
 	step: number;
 };
+
+// type Action = {
+// 	type: string;
+// 	payload: number;
+// };
+
 type Action = {
-	type: string;
+	type: ActionType;
 	payload: number;
 };
 
@@ -14,17 +26,17 @@ export default function UseReducerHooks({}) {
 	const [state, dispatch] = useReducer(reducer, initialState);
 	function reducer(state: State = initialState, action: Action) {
 		switch (action.type) {
-			case actionType.INCREMENT:
+			case ActionType.INCREMENT:
 				return {
 					...state,
 					count: state.count + state.step,
 				};
-			case actionType.DECREMENT:
+			case ActionType.DECREMENT:
 				return {
 					...state,
 					count: state.count - state.step,
 				};
-			case actionType.STEP:
+			case ActionType.STEP:
 				return {
 					...state,
 					step: action.payload,
@@ -41,14 +53,14 @@ export default function UseReducerHooks({}) {
 				className="input-field"
 				type="number"
 				value={state.step}
-				onChange={(e) => dispatch({ type: actionType.STEP, payload: Number(e.target.value) })}
+				onChange={(e) => dispatch({ type: ActionType.STEP, payload: Number(e.target.value) })}
 				placeholder="Step Size"
 			/>
 			<div className="flex mt-4">
-				<button className="btn-basic" onClick={() => dispatch({ type: actionType.INCREMENT })}>
+				<button className="btn-basic" onClick={() => dispatch({ type: ActionType.INCREMENT })}>
 					Increment
 				</button>
-				<button className="btn-danger" onClick={() => dispatch({ type: actionType.DECREMENT })}>
+				<button className="btn-danger" onClick={() => dispatch({ type: ActionType.DECREMENT })}>
 					Decrement
 				</button>
 			</div>
