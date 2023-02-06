@@ -16,10 +16,9 @@ type State = {
 // 	payload: number;
 // };
 
-type Action = {
-	type: ActionType;
-	payload: number;
-};
+type Action =
+	| { type: ActionType.INCREMENT | ActionType.DECREMENT }
+	| { type: ActionType.STEP; payload: number };
 
 export default function UseReducerHooks({}) {
 	const initialState: State = { count: 0, step: 1 };
@@ -37,7 +36,7 @@ export default function UseReducerHooks({}) {
 					...state,
 					count: state.count - state.step,
 				};
-			case ActionType.STEP:
+			case 'step':
 				return {
 					...state,
 					step: action.payload,
