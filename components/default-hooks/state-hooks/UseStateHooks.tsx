@@ -12,6 +12,7 @@ export default function UseStateHooks({}) {
 	};
 	return (
 		<div className="flex flex-col items-center justify-center">
+			<h1 className="mt-4">Counter By useState</h1>
 			<div className="count-badge my-4">{count}</div>
 			<input
 				className="input-field"

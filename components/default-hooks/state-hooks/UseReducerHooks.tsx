@@ -60,6 +60,7 @@ export default function UseReducerHooks({}) {
 
 	return (
 		<div className="flex flex-col items-center justify-center">
+			<h1 className="mt-4">Counter By useReducer</h1>
 			<div className="count-badge my-4">{state.count}</div>
 			<input
 				className="input-field"
