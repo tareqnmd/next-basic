@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import DefaultHooksNav from './DefaultHooksNav';
-import UseReducerHooks from './state-hooks/UseReducerHooks';
-import UseStateHooks from './state-hooks/UseStateHooks';
+import UseReducerHooks from './state-hooks/UseReducerHook';
+import UseStateHooks from './state-hooks/UseStateHook';
 
 const buttons = [
 	{ name: 'useState', type: 'state' },

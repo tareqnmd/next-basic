@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/default-hooks/state-hooks/UseReducerHooks_je.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/default-hooks/state-hooks/UseReducerHook_je.js"],
   "exclude": ["node_modules"]
 }
