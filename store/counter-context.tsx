@@ -1,10 +1,5 @@
 import { createContext, useState } from 'react';
 
-type CounterValueTypes = {
-	counter: number;
-	step: number;
-};
-
 const CounterContext = createContext({
 	counter: 1,
 	step: 0,
