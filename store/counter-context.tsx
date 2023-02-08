@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react';
 
 const CounterContext = createContext({
-	counter: 1,
+	count: 1,
 	step: 0,
 	increment: () => {},
 	decrement: () => {},
@@ -25,7 +25,7 @@ export const CounterContextProvider = ({ children }: { children: any }) => {
 	return (
 		<CounterContext.Provider
 			value={{
-				counter: count,
+				count: count,
 				step: step,
 				increment: incrementHandler,
 				decrement: decrementHandler,
