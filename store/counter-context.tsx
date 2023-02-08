@@ -8,7 +8,7 @@ const CounterContext = createContext({
 	stepper: (value: number) => {},
 });
 
-export const AuthContextProvider = ({ children }: { children: any }) => {
+export const CounterContextProvider = ({ children }: { children: any }) => {
 	const [count, setCount] = useState(0);
 	const [step, setStep] = useState(1);
 

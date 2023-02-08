@@ -1,3 +1,10 @@
+import { CounterContextProvider } from '@/store/counter-context';
+import UseContextCounter from './UseContextCounter';
+
 export default function UseContextHook() {
-	return <></>;
+	return (
+		<CounterContextProvider>
+			<UseContextCounter />
+		</CounterContextProvider>
+	);
 }
