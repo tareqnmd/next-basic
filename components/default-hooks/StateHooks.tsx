@@ -13,7 +13,13 @@ export default function StateHooks() {
 	return (
 		<>
 			<DefaultHooksNav type={type} setType={setType} buttons={buttons} />
-			<>{type === 'state' ? <UseStateHooks /> : <UseReducerHooks />}</>
+			<>
+				{type === 'state' ? (
+					<UseStateHooks />
+				) : type === 'reducer' ? (
+					<UseReducerHooks />
+				) : null}
+			</>
 		</>
 	);
 }
