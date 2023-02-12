@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import DefaultHooksNav from './DefaultHooksNav';
-import UseImperativeHandle from './ref-hooks/useImperativeHandle';
+import UseImperativeHandle from './ref-hooks/UseImperativeHandle';
 import UseRefHooks from './ref-hooks/UseRefHook';
 
 const buttons = [

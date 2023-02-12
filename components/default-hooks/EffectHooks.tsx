@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import DefaultHooksNav from './DefaultHooksNav';
 import UseEffectHook from './effect-hooks/UseEffectHook';
-import UseInsertionEffect from './effect-hooks/useInsertionEffect';
-import UseLayoutEffect from './effect-hooks/useLayoutEffect';
+import UseInsertionEffect from './effect-hooks/UseInsertionEffect';
+import UseLayoutEffect from './effect-hooks/UseLayoutEffect';
 
 const buttons = [
 	{ name: 'useEffect', type: 'effect' },
