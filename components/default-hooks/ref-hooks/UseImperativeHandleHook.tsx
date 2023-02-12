@@ -7,7 +7,7 @@ export default function UseImperativeHandleHook() {
 	}
 	return (
 		<>
-			<ImperativeHandleHook label="Enter your name:" ref={ref} />
+			<ImperativeHandleHook label="Enter your name:" type="text" ref={ref} />
 			<button type="button" onClick={handleClick}>
 				Edit
 			</button>

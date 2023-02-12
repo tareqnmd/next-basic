@@ -13,7 +13,11 @@ export default function RefHooks() {
 	return (
 		<>
 			<DefaultHooksNav type={type} setType={setType} buttons={buttons} />
-			{type === 'ref' ? <UseRefHooks /> : type === 'ref' ? <UseImperativeHandleHook /> : null}
+			{type === 'ref' ? (
+				<UseRefHooks />
+			) : type === 'imperativeHandle' ? (
+				<UseImperativeHandleHook />
+			) : null}
 		</>
 	);
 }

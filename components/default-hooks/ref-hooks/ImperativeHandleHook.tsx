@@ -2,6 +2,7 @@ import { forwardRef, useImperativeHandle, useRef } from 'react';
 
 type propsType = {
 	label: string;
+	type: string;
 };
 
 const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props: propsType, ref) {
