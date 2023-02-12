@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 
 export default function UseRefHooks() {
-	const inputRef: any = useRef('');
-	const intervalRef: any = useRef('');
+	const inputRef: any = useRef(null);
+	const intervalRef: any = useRef(null);
 	const [value, setValue] = useState(0);
 	const [now, setNow] = useState(0);
 	const [playing, setPlaying] = useState(false);
