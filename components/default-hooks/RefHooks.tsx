@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import DefaultHooksNav from './DefaultHooksNav';
-import UseImperativeHandle from './ref-hooks/UseImperativeHandle';
+import UseImperativeHandleHook from './ref-hooks/UseImperativeHandleHook';
 import UseRefHooks from './ref-hooks/UseRefHook';
 
 const buttons = [
@@ -13,7 +13,7 @@ export default function RefHooks() {
 	return (
 		<>
 			<DefaultHooksNav type={type} setType={setType} buttons={buttons} />
-			{type === 'ref' ? <UseRefHooks /> : type === 'ref' ? <UseImperativeHandle /> : null}
+			{type === 'ref' ? <UseRefHooks /> : type === 'ref' ? <UseImperativeHandleHook /> : null}
 		</>
 	);
 }
