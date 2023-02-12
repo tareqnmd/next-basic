@@ -1,6 +1,10 @@
 import { forwardRef, useImperativeHandle, useRef } from 'react';
 
-const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props, ref) {
+type propsType = {
+	label: string;
+};
+
+const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props: propsType, ref) {
 	const inputRef: any = useRef(null);
 	useImperativeHandle(
 		ref,
