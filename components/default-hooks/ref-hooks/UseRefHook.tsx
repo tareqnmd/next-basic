@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react';
 
 export default function UseRefHooks() {
-	const inputRef: { current: any } = useRef('');
+	const inputRef: any = useRef('');
+	const intervalRef: any = useRef('');
 	const [value, setValue] = useState(0);
+	const [now, setNow] = useState(0);
 	const [playing, setPlaying] = useState(false);
 
 	function handleClick() {
@@ -12,10 +14,15 @@ export default function UseRefHooks() {
 
 	function handleStart() {
 		setPlaying(true);
+		clearInterval(intervalRef.current);
+		intervalRef.current = setInterval(() => {
+			setNow((prev) => prev + 1);
+		}, 10);
 	}
 
 	function handleStop() {
 		setPlaying(false);
+		clearInterval(intervalRef.current);
 	}
 
 	return (
@@ -26,6 +33,7 @@ export default function UseRefHooks() {
 			<button className="btn-basic" onClick={handleClick}>
 				Focus & Value
 			</button>
+			<div className="mt-4">Stop Watch : {now}</div>
 			<button
 				className={playing ? 'btn-danger my-4' : 'btn-basic my-4'}
 				onClick={playing ? handleStop : handleStart}
