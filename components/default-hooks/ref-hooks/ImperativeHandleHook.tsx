@@ -21,7 +21,7 @@ const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props: pro
 		},
 		[]
 	);
-	return <input {...props} ref={inputRef} />;
+	return <input className="input-field my-4" {...props} ref={inputRef} />;
 });
 
 export default ImperativeHandleHook;

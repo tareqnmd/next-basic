@@ -27,7 +27,7 @@ export default function UseRefHooks() {
 
 	return (
 		<div className="flex flex-col items-center justify-center">
-			<h1 className="mt-4">Counter By useRef</h1>
+			<h1 className="mt-4">Example By useRef</h1>
 			<input className="input-field my-4" ref={inputRef} />
 			<div className="mb-4">Input Value : {value}</div>
 			<button className="btn-basic" onClick={handleClick}>

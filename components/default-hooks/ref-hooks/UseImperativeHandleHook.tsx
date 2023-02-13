@@ -6,11 +6,12 @@ export default function UseImperativeHandleHook() {
 		ref.current.focus();
 	}
 	return (
-		<>
+		<div className="flex flex-col items-center justify-center">
+			<h1 className="mt-4">Example By useImperativeHandler</h1>
 			<ImperativeHandleHook label="Enter your name:" type="text" ref={ref} />
-			<button type="button" onClick={handleClick}>
+			<button className="btn-basic" onClick={handleClick}>
 				Edit
 			</button>
-		</>
+		</div>
 	);
 }
