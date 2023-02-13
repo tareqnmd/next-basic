@@ -5,14 +5,17 @@ type propsType = {
 	type: string;
 };
 
-const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props: propsType, ref) {
+const ImperativeHandleHookNext = forwardRef(function ImperativeHandleHookNext(
+	props: propsType,
+	ref
+) {
 	const inputRef: any = useRef(null);
 	useImperativeHandle(
 		ref,
 		() => {
 			return {
-				focus() {
-					inputRef.current.focus();
+				increaseValue() {
+					inputRef.current.value = Number(inputRef.current.value) + 5;
 				},
 			};
 		},
@@ -26,4 +29,4 @@ const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props: pro
 	);
 });
 
-export default ImperativeHandleHook;
+export default ImperativeHandleHookNext;
