@@ -14,6 +14,9 @@ const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props: pro
 				focus() {
 					inputRef.current.focus();
 				},
+				addBorder() {
+					inputRef.current.style.border = '1px solid red';
+				},
 			};
 		},
 		[]

@@ -6,6 +6,7 @@ export default function UseImperativeHandleHook() {
 	const emailRef: any = useRef(null);
 	function editHandler() {
 		nameRef.current.focus();
+		nameRef.current.addBorder();
 	}
 	function increaseValue() {
 		emailRef.current.increaseValue();
