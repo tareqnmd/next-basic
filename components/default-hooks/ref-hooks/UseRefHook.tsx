@@ -1,28 +1,32 @@
 import { useRef, useState } from 'react';
 
 export default function UseRefHooks() {
-	const inputRef: any = useRef(null);
-	const intervalRef: any = useRef(null);
-	const [value, setValue] = useState(0);
+	const inputRef: { current: HTMLInputElement | null } = useRef(null);
+	const intervalRef: { current: NodeJS.Timeout | null } = useRef(null);
+	const [value, setValue] = useState('');
 	const [now, setNow] = useState(0);
 	const [playing, setPlaying] = useState(false);
 
 	function handleClick() {
-		setValue(inputRef.current.value ?? '');
+		setValue(inputRef?.current?.value ?? '');
 		inputRef?.current?.focus();
 	}
 
 	function handleStart() {
 		setPlaying(true);
-		clearInterval(intervalRef.current);
-		intervalRef.current = setInterval(() => {
-			setNow((prev) => prev + 1);
-		}, 10);
+		if (intervalRef.current) {
+			clearInterval(intervalRef.current);
+			intervalRef.current = setInterval(() => {
+				setNow((prev) => prev + 1);
+			}, 10);
+		}
 	}
 
 	function handleStop() {
 		setPlaying(false);
-		clearInterval(intervalRef.current);
+		if (intervalRef.current) {
+			clearInterval(intervalRef.current);
+		}
 	}
 
 	return (
