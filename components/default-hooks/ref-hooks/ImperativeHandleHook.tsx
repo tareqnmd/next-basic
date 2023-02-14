@@ -6,16 +6,18 @@ type propsType = {
 };
 
 const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props: propsType, ref) {
-	const inputRef: any = useRef(null);
+	const inputRef: { current: HTMLInputElement | null } = useRef(null);
 	useImperativeHandle(
 		ref,
 		() => {
 			return {
 				focus() {
-					inputRef.current.focus();
+					inputRef?.current?.focus();
 				},
 				addBorder() {
-					inputRef.current.style.border = '1px solid red';
+					if (inputRef.current) {
+						inputRef.current.style.border = '1px solid red';
+					}
 				},
 			};
 		},

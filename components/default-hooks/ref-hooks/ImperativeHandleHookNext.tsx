@@ -9,13 +9,15 @@ const ImperativeHandleHookNext = forwardRef(function ImperativeHandleHookNext(
 	props: propsType,
 	ref
 ) {
-	const inputRef: any = useRef(null);
+	const inputRef: { current: HTMLInputElement | null } = useRef(null);
 	useImperativeHandle(
 		ref,
 		() => {
 			return {
 				increaseValue() {
-					inputRef.current.value = Number(inputRef.current.value) + 5;
+					if (inputRef.current) {
+						inputRef.current.value = String(Number(inputRef.current.value) + 5);
+					}
 				},
 			};
 		},
