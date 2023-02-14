@@ -11,7 +11,7 @@ const ImperativeHandleHook = forwardRef(function ImperativeHandleHook(props: pro
 		ref,
 		() => {
 			return {
-				focus() {
+				focusElement() {
 					inputRef?.current?.focus();
 				},
 				addBorder() {

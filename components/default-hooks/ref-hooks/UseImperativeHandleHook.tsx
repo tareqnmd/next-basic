@@ -1,15 +1,25 @@
 import { useRef } from 'react';
 import ImperativeHandleHook from './ImperativeHandleHook';
 import ImperativeHandleHookNext from './ImperativeHandleHookNext';
+type EmailRefType = {
+	current: { increaseValue: Function } | null;
+};
+type NameRefType = {
+	current: { addBorder: Function; focusElement: Function } | null;
+};
 export default function UseImperativeHandleHook() {
-	const nameRef: any = useRef(null);
-	const emailRef: any = useRef(null);
+	const nameRef: NameRefType = useRef(null);
+	const emailRef: EmailRefType = useRef(null);
 	function editHandler() {
-		nameRef.current.focus();
-		nameRef.current.addBorder();
+		if (nameRef.current) {
+			nameRef.current.focusElement();
+			nameRef.current.addBorder();
+		}
 	}
 	function increaseValue() {
-		emailRef.current.increaseValue();
+		if (emailRef.current) {
+			emailRef.current.increaseValue();
+		}
 	}
 	return (
 		<div className="flex flex-col items-center justify-center">
