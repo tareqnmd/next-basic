@@ -1,3 +1,11 @@
+import { useId } from 'react';
+
 export default function UseIdHook() {
-	return <>UseIdHook</>;
+	const id = useId();
+	return (
+		<>
+			{id}
+			<input className="input-field" id={id} type="text" />
+		</>
+	);
 }
