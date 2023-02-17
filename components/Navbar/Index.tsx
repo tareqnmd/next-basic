@@ -7,9 +7,10 @@ const NavStyle = styled.header`
 
 export default function Index() {
 	return (
-		<NavStyle className="flex justify-between items-center w-100 shadow p-3 gap-4 link-area">
+		<NavStyle className="justify-between shadow link-area">
 			<Link href="/">Home</Link>
 			<nav>
+				<Link href="/page-types">Pages</Link>
 				<Link href="/default-hooks">Hooks</Link>
 			</nav>
 		</NavStyle>

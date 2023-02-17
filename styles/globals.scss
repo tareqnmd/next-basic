@@ -23,11 +23,20 @@
 
 // navigation links
 .link-area {
+	@apply flex items-center w-full p-3 gap-4;
 	a {
 		border-bottom: 2px solid;
 	}
 	.link-active {
 		border-color: green;
+	}
+	nav {
+		a {
+			margin-right: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 }
 // button area

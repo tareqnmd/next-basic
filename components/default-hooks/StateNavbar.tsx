@@ -6,7 +6,7 @@ export default function StateNavbar() {
 	const currentRoute = router.pathname;
 
 	return (
-		<nav className="flex justify-center items-center w-100 p-3 gap-4 link-area">
+		<nav className="justify-center link-area">
 			<Link
 				className={currentRoute === '/default-hooks/state-hooks' ? 'link-active' : ''}
 				href="/default-hooks/state-hooks"
