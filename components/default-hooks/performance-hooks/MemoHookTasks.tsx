@@ -36,10 +36,10 @@ const MemoHookTasks = ({ tasks }: { tasks: TaskType }) => {
 			<button className="btn-basic my-4" onClick={renderHandler}>
 				Render
 			</button>
-			{reviewedTasks.map((task) => (
-				<>
+			{reviewedTasks.map((task, index) => (
+				<div key={index}>
 					{task.name} - {task.type}
-				</>
+				</div>
 			))}
 		</>
 	);
