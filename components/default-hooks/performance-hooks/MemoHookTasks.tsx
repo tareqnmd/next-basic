@@ -9,14 +9,24 @@ const MemoHookTasks = ({ tasks }: { tasks: TaskType }) => {
 	}, [tasks, type]);
 	return (
 		<>
-			<>
-				<button onClick={() => setType('active')}>Active</button>
-				<button onClick={() => setType('completed')}>Pending</button>
-				<button onClick={() => setType('rejected')}>Rejected</button>
-				<button onClick={() => setType('pending')}>Completed</button>
-			</>
+			<div className="btn-group py-4">
+				<button className="bg-blue-500" onClick={() => setType('active')}>
+					Active
+				</button>
+				<button className="bg-yellow-500" onClick={() => setType('completed')}>
+					Pending
+				</button>
+				<button className="bg-red-900" onClick={() => setType('rejected')}>
+					Rejected
+				</button>
+				<button className="bg-green-900" onClick={() => setType('pending')}>
+					Completed
+				</button>
+			</div>
 			{reviewedTasks.map((task) => (
-				<>{task ? 1 : 2}</>
+				<>
+					{task.name} - {task.type}
+				</>
 			))}
 		</>
 	);

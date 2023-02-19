@@ -15,6 +15,18 @@
 	.btn-basic {
 		@apply bg-blue-500 w-40 inline-block hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
 	}
+	.btn-group {
+		@apply flex;
+		button {
+			@apply inline-block hover:bg-emerald-800 text-white font-bold py-2 px-4;
+			&:first-child {
+				@apply rounded-l;
+			}
+			&:last-child {
+				@apply rounded-r;
+			}
+		}
+	}
 	//danger button
 	.btn-danger {
 		@apply bg-red-500 w-40 hover:bg-red-700 text-white font-bold py-2 px-4 rounded;
