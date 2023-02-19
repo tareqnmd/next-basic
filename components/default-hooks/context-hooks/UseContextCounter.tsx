@@ -1,4 +1,4 @@
-import CounterContext from '@/store/counter-context';
+import CounterContext from '@/store/context/counter-context';
 import { useContext } from 'react';
 import UseContextCounterChildValue from './UseContextCounterChildValue';
 
