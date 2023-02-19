@@ -4,9 +4,18 @@ import { TaskType } from './UseMemoHook';
 
 const MemoHookTasks = ({ tasks }: { tasks: TaskType }) => {
 	const [type, setType] = useState('active');
+	const [render, setRender] = useState(0);
+
 	const reviewedTasks = useMemo(() => {
+		console.log('called memo');
 		return filterTasks(tasks, type);
 	}, [tasks, type]);
+
+	const renderHandler = () => {
+		console.log('called fnc');
+		setRender((prev) => prev + 1);
+	};
+
 	return (
 		<>
 			<div className="btn-group py-4">
@@ -23,6 +32,9 @@ const MemoHookTasks = ({ tasks }: { tasks: TaskType }) => {
 					Completed
 				</button>
 			</div>
+			<button className="btn-basic" onClick={renderHandler}>
+				Render {render}
+			</button>
 			{reviewedTasks.map((task) => (
 				<>
 					{task.name} - {task.type}
