@@ -1,24 +1,25 @@
-import { filterTasks } from '@/utils/helper';
 import { useMemo, useState } from 'react';
 import { TaskType } from './UseMemoHook';
 
 const MemoHookTasks = ({ tasks }: { tasks: TaskType }) => {
 	const [type, setType] = useState('active');
-	const [render, setRender] = useState(0);
+
+	const filterTasks = (tasks: { name: string; type: string }[], type: string) => {
+		console.log('fnc called');
+		return type ? tasks.filter((item: { type: string }) => item.type === type) : tasks;
+	};
 
 	const reviewedTasks = useMemo(() => {
-		console.log('called memo');
 		return filterTasks(tasks, type);
 	}, [tasks, type]);
 
 	const renderHandler = () => {
-		console.log('called fnc');
-		setRender((prev) => prev + 1);
+		filterTasks(tasks, type);
 	};
 
 	return (
 		<>
-			<div className="btn-group py-4">
+			<div className="btn-group mt-4">
 				<button className="bg-blue-500" onClick={() => setType('active')}>
 					Active
 				</button>
@@ -32,8 +33,8 @@ const MemoHookTasks = ({ tasks }: { tasks: TaskType }) => {
 					Completed
 				</button>
 			</div>
-			<button className="btn-basic" onClick={renderHandler}>
-				Render {render}
+			<button className="btn-basic my-4" onClick={renderHandler}>
+				Render
 			</button>
 			{reviewedTasks.map((task) => (
 				<>
