@@ -6,6 +6,7 @@ const tasks: TaskType = [
 	{ name: 'Task 1', type: 'completed' },
 	{ name: 'Task 2', type: 'pending' },
 	{ name: 'Task 3', type: 'rejected' },
+	{ name: 'Task 4', type: 'active' },
 ];
 
 export default function UseMemoHook() {
