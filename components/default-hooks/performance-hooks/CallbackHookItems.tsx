@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 
-type ItemFunc = () => [];
-
-const CallbackHookItems = ({ getItems }: { getItems: ItemFunc }) => {
+const CallbackHookItems = ({ getItems }: { getItems: any }) => {
 	const [items, setItems] = useState([]);
 	useEffect(() => {
 		setItems(getItems);
