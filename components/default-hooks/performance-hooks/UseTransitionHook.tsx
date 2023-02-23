@@ -6,7 +6,7 @@ export default function UseTransitionHook() {
 
 	const [loading, startTransition] = useTransition();
 
-	const getEvent = (e) => {
+	const getEvent = (e: { target: HTMLInputElement }) => {
 		const { value } = e.target;
 		setStep(value);
 
@@ -17,7 +17,7 @@ export default function UseTransitionHook() {
 		// setLists(listItems);
 
 		startTransition(() => {
-			const listItems = [];
+			const listItems: string[] = [];
 			for (let i = 0; i < LIST_SIZE; i++) {
 				listItems.push(value);
 			}
