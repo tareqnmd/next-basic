@@ -17,7 +17,7 @@ export default function UseTransitionHook() {
 		// setLists(listItems);
 
 		startTransition(() => {
-			const listItems: string[] = [];
+			const listItems: any = [];
 			for (let i = 0; i < LIST_SIZE; i++) {
 				listItems.push(value);
 			}
