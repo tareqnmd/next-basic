@@ -1,5 +1,12 @@
+import PageNavbar from '@/components/page-types/PageNavbar';
+
 const csr = () => {
-	return <>csr</>;
+	return (
+		<>
+			<PageNavbar />
+			CSR
+		</>
+	);
 };
 
 export default csr;

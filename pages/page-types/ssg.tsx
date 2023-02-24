@@ -1,5 +1,12 @@
+import PageNavbar from '@/components/page-types/PageNavbar';
+
 const ssg = () => {
-	return <>ssg</>;
+	return (
+		<>
+			<PageNavbar />
+			SSG
+		</>
+	);
 };
 
 export default ssg;

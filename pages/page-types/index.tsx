@@ -1,5 +1,11 @@
+import PageNavbar from '@/components/page-types/PageNavbar';
+
 const index = () => {
-	return <></>;
+	return (
+		<>
+			<PageNavbar />
+		</>
+	);
 };
 
 export default index;
