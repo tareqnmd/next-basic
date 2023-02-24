@@ -6,7 +6,7 @@ const ssg = ({ data }: { data: [] }) => {
 	return (
 		<>
 			<PageNavbar />
-			<ItemList data={data} />
+			<ItemList itemData={data} />
 		</>
 	);
 };
