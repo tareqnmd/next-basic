@@ -12,7 +12,7 @@ const ssg = (props: []) => {
 export default ssg;
 
 export async function getStaticProps() {
-	const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+	const res = await fetch('http://localhost:9000/tasks');
 	const data = await res.json();
 	return {
 		props: { data },
