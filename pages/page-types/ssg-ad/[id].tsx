@@ -6,7 +6,7 @@ const Single = ({ task }: { task: { title: string; completed: boolean } }) => {
 			<PageNavbar />
 			<div className="flex justify-center items-center">
 				<div>
-					{task?.title}-{task?.completed ? 'Completed' : 'Pending'}
+					{task?.title} - {task?.completed ? 'Completed' : 'Pending'}
 				</div>
 			</div>
 		</>
