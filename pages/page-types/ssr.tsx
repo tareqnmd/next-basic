@@ -15,7 +15,6 @@ export default ssr;
 export async function getServerSideProps() {
 	const res = await fetch('http://localhost:9000/todos');
 	const data = await res.json();
-	console.log('data', data.data);
 	return {
 		props: { data },
 	};
