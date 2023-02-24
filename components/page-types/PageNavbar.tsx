@@ -26,7 +26,7 @@ export default function PageNavbar() {
 				SSG
 			</Link>
 			<Link
-				className={currentRoute === '/page-types/ssg-ad' ? 'link-active' : ''}
+				className={currentRoute.includes('/page-types/ssg-ad') ? 'link-active' : ''}
 				href="/page-types/ssg-ad"
 			>
 				SSG ADVANCE
