@@ -1,3 +1,4 @@
+import ItemList from '@/components/page-types/ItemList';
 import PageNavbar from '@/components/page-types/PageNavbar';
 
 const ssg = ({ data }: { data: [] }) => {
@@ -5,6 +6,7 @@ const ssg = ({ data }: { data: [] }) => {
 	return (
 		<>
 			<PageNavbar />
+			<ItemList data={data} />
 		</>
 	);
 };
