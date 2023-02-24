@@ -1,7 +1,7 @@
 import PageNavbar from '@/components/page-types/PageNavbar';
 
-const ssr = (props: []) => {
-	console.log('props', props);
+const ssr = ({ data }: { data: [] }) => {
+	console.log('data', data);
 	return (
 		<>
 			<PageNavbar />
