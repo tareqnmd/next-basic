@@ -1,0 +1,14 @@
+{
+	"name": "fake-server",
+	"version": "1.0.0",
+	"description": "A Fake Server for json",
+	"main": "index.js",
+	"scripts": {
+		"start": "json-server --watch db.json --no-cors true --port 9000"
+	},
+	"dependencies": {
+		"json-server": "^0.17.0"
+	},
+	"author": "Tareq",
+	"license": "MIT"
+}
