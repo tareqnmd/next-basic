@@ -20,7 +20,9 @@ export async function getStaticPaths() {
 	const tasks = await res.json();
 
 	return {
-		fallback: 'blocking',
+		// fallback: true,
+		fallback: false,
+		// fallback: 'blocking,
 		paths: tasks.map((task: { id: number }) => ({
 			params: { id: task.id.toString() },
 		})),
