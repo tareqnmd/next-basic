@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 export default function UseLayoutEffect() {
 	const [show, setShow] = useState(false);
 	const button: { current: HTMLButtonElement | null } = useRef(null);
 	const toggle: { current: HTMLDivElement | null } = useRef(null);
-	
+
 	useLayoutEffect(() => {
 		if (toggle.current && button.current) {
 			const { height } = button.current?.getBoundingClientRect();
@@ -21,7 +21,8 @@ export default function UseLayoutEffect() {
 	// }, [show]);
 
 	return (
-		<>
+		<div className="flex flex-col items-center justify-center">
+			<h1 className="mt-4">useLayoutEffect Example</h1>
 			<button
 				className="border-4"
 				ref={button}
@@ -41,6 +42,6 @@ export default function UseLayoutEffect() {
 					/>
 				</div>
 			)}
-		</>
+		</div>
 	);
 }

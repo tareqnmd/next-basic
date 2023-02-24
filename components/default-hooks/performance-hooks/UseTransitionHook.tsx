@@ -26,7 +26,8 @@ export default function UseTransitionHook() {
 	};
 
 	return (
-		<>
+		<div className="flex flex-col items-center justify-center">
+			<h1 className="mt-4">useTransition Example</h1>
 			<input
 				className="input-field"
 				type="text"
@@ -43,6 +44,6 @@ export default function UseTransitionHook() {
 					))}
 				</>
 			)}
-		</>
+		</div>
 	);
 }

@@ -9,7 +9,8 @@ export default function UseDeferredValueHook() {
 	};
 
 	return (
-		<>
+		<div className="flex flex-col items-center justify-center">
+			<h1 className="mt-4">useDeferredValue Example</h1>
 			<input
 				className="input-field"
 				type="text"
@@ -18,6 +19,6 @@ export default function UseDeferredValueHook() {
 				placeholder="Write Here"
 			/>
 			{step && <DeferredValueHook input={step} />}
-		</>
+		</div>
 	);
 }
