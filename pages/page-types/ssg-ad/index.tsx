@@ -2,7 +2,7 @@ import ItemList from '@/components/page-types/ItemList';
 import PageNavbar from '@/components/page-types/PageNavbar';
 
 const ssg = ({ data }: { data: [] }) => {
-	console.log('data', data);
+	console.log('ssg-ad', data);
 	return (
 		<>
 			<PageNavbar />
@@ -18,5 +18,6 @@ export async function getStaticProps() {
 	const data = await res.json();
 	return {
 		props: { data },
+		revalidate: 30,
 	};
 }

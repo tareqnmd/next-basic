@@ -1,7 +1,7 @@
 import PageNavbar from '@/components/page-types/PageNavbar';
 
 const ssg = ({ data }: { data: [] }) => {
-	console.log('data', data);
+	console.log('ssg', data);
 	return (
 		<>
 			<PageNavbar />
