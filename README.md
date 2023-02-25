@@ -1,7 +1,12 @@
-Mohammad Tareq
 
-Next.js Topics :
+## Author
 
+[@tareqnmd](https://www.github.com/octokatherine)
+
+
+## Topics
+
+```
 What it is? 
 ->Framework based on React with more features
 ->Solve problems for developers
@@ -18,4 +23,41 @@ Page Concepts?
 ->SSG (getStaticProps)
 ->Dynamic Pages (getStaticProps + getStaticPaths + Fallback)
 ->Link Pages
+
+Optimize Features?
+->Image
+```
+
+## Tech
+
+**Client:** Next.js, Redux, TailwindCSS
+
+**Server:** Node, Express
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/tareqnmd/next-basic.git
+```
+
+Go to the project directory
+
+```bash
+  cd next-basic
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
 
