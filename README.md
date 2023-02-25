@@ -12,20 +12,23 @@ What it is?
 ->Solve problems for developers
 ->Make life easier 
 
-Key Features? 
+Key Features
 ->File Based Routing
 ->CSR/SSR/SSG
 ->Fullstack
 
-Page Concepts?
+Page Concepts
 ->CSR
 ->SSR (getServerSideProps)
 ->SSG (getStaticProps)
 ->Dynamic Pages (getStaticProps + getStaticPaths + Fallback)
 ->Link Pages
 
-Optimize Features?
+Layout
+
+Optimize Features
 ->Image
+->Font
 ```
 
 ## Tech
