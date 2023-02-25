@@ -21,9 +21,9 @@ export async function getStaticPaths() {
 
 	return {
 		// generated pages plus return empty then dynamically generated pages
-		fallback: true,
+		// fallback: true,
 		// only generated pages 
-		// fallback: false,
+		fallback: false,
 		// generated pages plus dynamically generated pages
 		// fallback: 'blocking',
 		paths: tasks.map((task: { id: number }) => ({
