@@ -12,3 +12,10 @@ Key Features?
 ->CSR/SSR/SSG
 ->Fullstack
 
+Page Concepts?
+->CSR
+->SSR (getServerSideProps)
+->SSG (getStaticProps)
+->Dynamic Pages (getStaticProps + getStaticPaths + Fallback)
+->Link Pages
+
