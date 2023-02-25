@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 		// only generated pages
 		fallback: false,
 		//
-		// fallback: 'blocking,
+		// fallback: 'blocking',
 		paths: tasks.map((task: { id: number }) => ({
 			params: { id: task.id.toString() },
 		})),
