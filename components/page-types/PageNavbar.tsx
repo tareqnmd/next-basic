@@ -8,19 +8,19 @@ export default function PageNavbar() {
 	return (
 		<nav className="justify-center link-area">
 			<Link
-				className={currentRoute === '/page-types/csr' ? 'link-active' : ''}
+				className={currentRoute.includes('/page-types/csr') ? 'link-active' : ''}
 				href="/page-types/csr"
 			>
 				CSR
 			</Link>
 			<Link
-				className={currentRoute === '/page-types/ssr' ? 'link-active' : ''}
+				className={currentRoute.includes('/page-types/ssr') ? 'link-active' : ''}
 				href="/page-types/ssr"
 			>
 				SSR
 			</Link>
 			<Link
-				className={currentRoute === '/page-types/ssg' ? 'link-active' : ''}
+				className={currentRoute.includes('/page-types/ssg') ? 'link-active' : ''}
 				href="/page-types/ssg"
 			>
 				SSG
