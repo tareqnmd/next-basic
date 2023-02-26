@@ -5,7 +5,7 @@ const nextConfig = {
 		domains: ['images.unsplash.com'],
 	},
 	compiler: {
-		removeConsole: true,
+		// removeConsole: true,
 	},
 };
 
