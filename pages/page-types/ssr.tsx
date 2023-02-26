@@ -13,7 +13,7 @@ const ssr = ({ data }: { data: [] }) => {
 export default ssr;
 
 export async function getServerSideProps() {
-	const res = await fetch('http://localhost:9000/todos');
+	const res = await fetch(`${process.env.API_URL}todos`);
 	const data = await res.json();
 	console.log('ssr response', data);
 	return {

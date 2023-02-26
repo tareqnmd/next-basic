@@ -16,13 +16,13 @@ const Single = ({ task }: { task: { title: string; completed: boolean } }) => {
 export default Single;
 
 export async function getStaticPaths() {
-	const res = await fetch('http://localhost:9000/tasks');
+	const res = await fetch(`${process.env.API_URL}tasks`);
 	const tasks = await res.json();
 
 	return {
 		// generated pages plus return empty then dynamically generated pages
 		// fallback: true,
-		// only generated pages 
+		// only generated pages
 		fallback: false,
 		// generated pages plus dynamically generated pages
 		// fallback: 'blocking',
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: { params: { id: number } }) {
 	const id = context.params.id;
-	const res = await fetch(`http://localhost:9000/tasks/${id}`);
+	const res = await fetch(`${process.env.API_URL}tasks/${id}`);
 	const task = await res.json();
 	return {
 		props: { task },

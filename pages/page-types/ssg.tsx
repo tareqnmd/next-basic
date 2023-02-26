@@ -12,7 +12,7 @@ const ssg = ({ data }: { data: [] }) => {
 export default ssg;
 
 export async function getStaticProps() {
-	const res = await fetch('http://localhost:9000/tasks');
+	const res = await fetch(`${process.env.API_URL}tasks`);
 	const data = await res.json();
 	console.log('ssg response', data);
 	return {
