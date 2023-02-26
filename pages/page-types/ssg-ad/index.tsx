@@ -19,6 +19,6 @@ export async function getStaticProps() {
 	console.log('ssg-ad response', data);
 	return {
 		props: { data },
-		revalidate: 10,
+		revalidate: 8,
 	};
 }
