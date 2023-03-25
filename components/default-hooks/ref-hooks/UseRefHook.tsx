@@ -14,12 +14,10 @@ export default function UseRefHooks() {
 
 	function handleStart() {
 		setPlaying(true);
-		if (intervalRef.current) {
-			clearInterval(intervalRef.current);
-			intervalRef.current = setInterval(() => {
-				setNow((prev) => prev + 1);
-			}, 10);
-		}
+		intervalRef.current && clearInterval(intervalRef.current);
+		intervalRef.current = setInterval(() => {
+			setNow((prev) => prev + 1);
+		}, 10);
 	}
 
 	function handleStop() {
@@ -32,9 +30,15 @@ export default function UseRefHooks() {
 	return (
 		<div className="flex flex-col items-center justify-center">
 			<h1 className="mt-4">Example By useRef</h1>
-			<input className="input-field my-4" ref={inputRef} />
+			<input
+				className="input-field my-4"
+				ref={inputRef}
+			/>
 			<div className="mb-4">Input Value : {value}</div>
-			<button className="btn-basic" onClick={handleClick}>
+			<button
+				className="btn-basic"
+				onClick={handleClick}
+			>
 				Focus & Value
 			</button>
 			<div className="mt-4">Stop Watch : {now}</div>

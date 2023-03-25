@@ -28,6 +28,9 @@ export default function UseEffectHook() {
 
 	useEffect(() => {
 		setChangedValue(5 + count);
+		return () => {
+			console.log('cleanup');
+		};
 	}, [count]);
 
 	return (
@@ -50,10 +53,16 @@ export default function UseEffectHook() {
 				placeholder="Step Size"
 			/>
 			<div className="flex mt-4">
-				<button className="btn-basic" onClick={increment}>
+				<button
+					className="btn-basic"
+					onClick={increment}
+				>
 					Increment
 				</button>
-				<button className="btn-danger" onClick={decrement}>
+				<button
+					className="btn-danger"
+					onClick={decrement}
+				>
 					Decrement
 				</button>
 			</div>
